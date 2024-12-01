@@ -1,10 +1,10 @@
 // app/layout.tsx
-import { Inter } from "next/font/google";
+import { Geist } from "next/font/google";
 import { Providers } from "./providers";
 import Navbar from "./ui/nav/navbar";
 import "@/app/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={geist.className}>
         <Providers attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main className="pt-16 min-h-screen bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100">
